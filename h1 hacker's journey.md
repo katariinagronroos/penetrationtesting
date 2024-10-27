@@ -5,11 +5,13 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 ### x) Lue/katso/kuuntele ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.)
 
 ### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain.
--
--
--
+
+- Intrusion Kill Chain tai Cyber Kill Chain on Lockheed Martinin kehittämä 7-osainen prosessi, jossa kuvataan tietojärjestelmiin tunkeutumista vaihe vaiheelta. Mikäli jokin vaihe epäonnistuu, koko yritys epäonnistuu.
+- Tausta USAn armeijan toiminnassa, muokattu tietojärjestelmille sopivaksi
+- Reconnaissance, weaponization, delivery, Exploitation, Installation, Command and Control (C2), Actions on Objectives
 
 ###  KKO:2003:36
+
 -KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä.
 -
 -
