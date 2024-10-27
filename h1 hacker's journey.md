@@ -1,4 +1,4 @@
-Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10 ja __ kotona omalla tietokoneella Lenovo Yoga Slim 7 14ARE05. Hyödynsin tehtävissä virtuaalikoneita ja Virtualbox-alustaa. 
+Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10 ja __ kotona omalla tietokoneella Lenovo Yoga Slim 7 14ARE05. Hyödynsin tehtävissä virtuaalikoneita ja Oracle vm Virtualbox-alustaa. 
 
 Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tunkeutumistestaus/.
 
@@ -9,7 +9,19 @@ KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsite
 
 ### a) Asenna Kali virtuaalikoneeseen. (Jos asennuksessa ei ole mitään ongelmia tai olet asentanut jo aiemmin, tarkkaa raporttia tästä alakohdasta ei tarvita. Kerro silloin kuitenkin, mikä versio ja millä asennustavalla. Jos on ongelmia, niin tarkka ja toistettava raportti).
 
-Asensin virtualboxin virtuaalikoneen
+Asensin virtualboxin virtuaalikoneeseen Kalin live-version 2024.3 (kali-linux-2024.3-live-AMD64.iso).
+Asennuksessa ei ollut ongelmia, joten tästä ei ole enempää raportoitavaa.
+
+### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
+
+Ensin testasin verkkoyhteyden ping-komennolla, ennenkuin olin irrottanut koneen verkosta. Näytti toimivan, ja paketteja siirtyi. Tämän jälkeen irrotin Kalini verkosta virtualboxin asetuksista, eikä ping-komennolle tullut enää vastausta.
+
+![image](https://github.com/user-attachments/assets/7521caca-cf0d-4704-8ea0-6f6f80607a0e)
+
+### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
+
+
+
 
 ## Lähteet
 
@@ -20,3 +32,8 @@ https://terokarvinen.com/tunkeutumistestaus/ Luettu 27.10.2024
 KKO KKO:2003:36, 2003. Luettavissa:
 
 https://finlex.fi/fi/oikeus/kko/kko/2003/20030036 Luettu 27.10.2024
+
+
+Kali. Luettavissa:
+
+https://www.kali.org/get-kali/#kali-live Luettu 27.10.2024
