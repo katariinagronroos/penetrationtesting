@@ -13,7 +13,10 @@ Asensin virtualboxin virtuaalikoneen
 
 ## Lähteet
 
-Karvinen, Tero 2024 Luettavissa: https://terokarvinen.com/tunkeutumistestaus/ Luettu 27.10.2024
+Karvinen, Tero 2024: Tunkeutumistestaus. Luettavissa: 
+
+https://terokarvinen.com/tunkeutumistestaus/ Luettu 27.10.2024
 
 KKO KKO:2003:36, 2003. Luettavissa:
+
 https://finlex.fi/fi/oikeus/kko/kko/2003/20030036 Luettu 27.10.2024
