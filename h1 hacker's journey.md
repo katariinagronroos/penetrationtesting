@@ -16,11 +16,21 @@ Asennuksessa ei ollut ongelmia, joten tästä ei ole enempää raportoitavaa.
 
 Ensin testasin verkkoyhteyden ping-komennolla, ennenkuin olin irrottanut koneen verkosta. Näytti toimivan, ja paketteja siirtyi. Tämän jälkeen irrotin Kalini verkosta virtualboxin asetuksista, eikä ping-komennolle tullut enää vastausta.
 
+"--- 8.8.8.8 ping statistics ---
+339 packets transmitted, 0 received, 100% packet loss, time 353002ms"
+
+
 ![image](https://github.com/user-attachments/assets/7521caca-cf0d-4704-8ea0-6f6f80607a0e)
 
+
 ### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
+, 
+Porttiskannasin 1000 tavallista tcp-porttia nmap -A localhost komennolla. Koska olin irrottanut koneen verkosta, oli tuloksena se, localhost oli aktiivinen, mutta DNS-palvelimia ei löytynyt. 
+"All 1000 scanned ports on localhost (127.0.0.1) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)"
 
 
+![image](https://github.com/user-attachments/assets/f103156b-7655-42aa-9e94-d5f3e0093592)
 
 
 ## Lähteet
