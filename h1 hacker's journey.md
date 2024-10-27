@@ -21,11 +21,13 @@ Ensiksi testasin live-versiota,ja tämän jälkeen asensin koko käyttöjärjest
 
 Tämän jälkeen huomasin, että Kalin sivuilla oli myös tälläisiä "Pre-Made Kali VirtualBox VM", joten poistin manuaalisesti asentamani Kalin ja halusin testata tälläisen valmiin asennusta.
 Luin tämän manuaalia (https://www.kali.org/docs/virtualization/import-premade-virtualbox/) 
-Asennuksessa ei ollut ongelmia, joten tästä ei ole enempää raportoitavaa.
+
+Asensin Kalin kuitenkin myös manuaalisesti uusiksi. 
+Näissä ei ollut ongelmia, joten tästä ei ole enempää raportoitavaa.
 
 ### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
 
-Ensin testasin verkkoyhteyden ping-komennolla, ennenkuin olin irrottanut koneen verkosta. Näytti toimivan, ja paketteja siirtyi. Tämän jälkeen irrotin Kalini verkosta virtualboxin asetuksista, eikä ping-komennolle tullut enää vastausta.
+Ensin testasin verkkoyhteyden ping-komennolla, ennenkuin olin irrottanut koneen verkosta. Näytti toimivan, ja paketteja siirtyi. Tämän jälkeen irrotin Kalini verkosta virtualboxin asetuksista, eikä ping-komennolle tullut enää vastausta. Oli siis irroitettu netistä.
 
 "--- 8.8.8.8 ping statistics ---
 339 packets transmitted, 0 received, 100% packet loss, time 353002ms"
