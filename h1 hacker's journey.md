@@ -10,6 +10,7 @@ KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsite
 ### a) Asenna Kali virtuaalikoneeseen. (Jos asennuksessa ei ole mitään ongelmia tai olet asentanut jo aiemmin, tarkkaa raporttia tästä alakohdasta ei tarvita. Kerro silloin kuitenkin, mikä versio ja millä asennustavalla. Jos on ongelmia, niin tarkka ja toistettava raportti).
 
 Asensin virtualboxin virtuaalikoneeseen Kalin live-version 2024.3 (kali-linux-2024.3-live-AMD64.iso).
+Ensiksi testasin live-versiota,ja tämän jälkeen asensin koko käyttöjärjestelmän koneelle. 
 Asennuksessa ei ollut ongelmia, joten tästä ei ole enempää raportoitavaa.
 
 ### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
@@ -24,7 +25,7 @@ Ensin testasin verkkoyhteyden ping-komennolla, ennenkuin olin irrottanut koneen 
 
 
 ### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
-, 
+ 
 Porttiskannasin 1000 tavallista tcp-porttia nmap -A localhost komennolla. Koska olin irrottanut koneen verkosta, oli tuloksena se, localhost oli aktiivinen, mutta DNS-palvelimia ei löytynyt. 
 "All 1000 scanned ports on localhost (127.0.0.1) are in ignored states.
 Not shown: 1000 closed tcp ports (conn-refused)"
@@ -32,6 +33,10 @@ Not shown: 1000 closed tcp ports (conn-refused)"
 
 ![image](https://github.com/user-attachments/assets/f103156b-7655-42aa-9e94-d5f3e0093592)
 
+
+### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
+
+Asentaakseni demoneja, täytyi kone yhdistää takaisin nettiin. 
 
 ## Lähteet
 
