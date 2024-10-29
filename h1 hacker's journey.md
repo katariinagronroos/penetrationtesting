@@ -1,4 +1,4 @@
-Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10 ja __ kotona omalla tietokoneella Lenovo Yoga Slim 7 14ARE05. Hyödynsin tehtävissä virtuaalikoneita ja Oracle vm Virtualbox-alustaa. 
+Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10 ja 29.10 VirtualBox VM, jossa asennettuna Kali Linux. Kalissa 6 GB muistia ja 20GB tilaa.
 
 Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tunkeutumistestaus/.
 
@@ -51,10 +51,35 @@ Not shown: 1000 closed tcp ports (conn-refused)"
 ### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
 
 Asentaakseni demoneja, täytyi kone yhdistää takaisin nettiin. 
+Asensin apache2 ja nanon, ja tämän jälkeen skannasin uusiksi.
 
+![image](https://github.com/user-attachments/assets/87fdfe1b-fc5c-4693-b11c-96870a287f2e)
+
+Tässä ei nyt näytä olevan eroja mitä analysoida, joten jotain on luultavimmin väärin. Palaan tähän myöhemmin.
+
+### e) Asenna Metasploitable 2 virtuaalikoneeseen
+
+Asensin Metasploitable 2 osoitteesta https://sourceforge.net/projects/metasploitable/files/latest/download.
+Noudatin Valkamon ohjeita(https://tuomasvalkamo.com/PenTestCourse/week-2/) asennuksessa, purin tiedoston ja lisäsin tämän Virtualboxiin.
+
+
+### f) Tee koneiden välille virtuaaliverkko.
+
+Tein koneiden välille virtuaaliverkon niin, että 
+
+Muokkasin verkkoasetuksia ohjeistuksen mukaan niin, että sallin DHCP serverin. 
+
+![image](https://github.com/user-attachments/assets/1e84b50e-e6e3-4f3e-a952-aa5801b4dd04)
+
+
+Muokkasin Metasploitablen asetuksia niin, että vaihdoin network adapterin Natista luomaani Host only#2.
+
+![image](https://github.com/user-attachments/assets/029ec522-3557-4288-a8b8-b442b4ca16bf)
+
+Tämän jälkeen muokkasin Kalin verkkoasetuksia niin, että lisäsin kyseisen verkon  adapter 2 kohtaan.
 ## Lähteet
 
-Karvinen, Tero 2024: Tunkeutumistestaus. Luettavissa: 
+Karvinen 2024: Tunkeutumistestaus. Luettavissa: 
 
 https://terokarvinen.com/tunkeutumistestaus/ Luettu 27.10.2024
 
@@ -71,3 +96,11 @@ https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-Wh
 Kali. Luettavissa:
 
 https://www.kali.org/get-kali/#kali-live Luettu 27.10.2024
+
+Luettavissa: 
+
+https://sourceforge.net/projects/metasploitable/files/latest/download Luettu 29.10.2024
+
+Valkamo 2022: Hacking into a Target Using Metasploit. Luettavissa:
+
+https://tuomasvalkamo.com/PenTestCourse/week-2/ Luettu 29.10.2024
