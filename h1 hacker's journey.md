@@ -44,6 +44,7 @@ Porttiskannasin 1000 tavallista tcp-porttia nmap -A localhost komennolla. Koska 
 "All 1000 scanned ports on localhost (127.0.0.1) are in ignored states.
 Not shown: 1000 closed tcp ports (conn-refused)"
 
+1000 tavallisinta tcp-porttia ovat "ignored" tilassa, ja myöskin "1000 closed tcp-ports", eli kaikki portit kiinni niinkuin kuuluisikin?
 
 ![image](https://github.com/user-attachments/assets/f103156b-7655-42aa-9e94-d5f3e0093592)
 
@@ -51,11 +52,24 @@ Not shown: 1000 closed tcp ports (conn-refused)"
 ### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
 
 Asentaakseni demoneja, täytyi kone yhdistää takaisin nettiin. 
-Asensin apache2 ja nanon, ja tämän jälkeen skannasin uusiksi.
+Asensin apache2 ja openssh-serverin, ja tämän jälkeen skannasin uusiksi.
 
 ![image](https://github.com/user-attachments/assets/87fdfe1b-fc5c-4693-b11c-96870a287f2e)
 
-Tässä ei nyt näytä olevan eroja mitä analysoida, joten jotain on luultavimmin väärin. Palaan tähän myöhemmin.
+Tässä ei nyt näytä olevan eroja mitä analysoida, joten jotain on luultavimmin väärin. Palaan tähän myöhemmin. // edit 29.10.2024
+
+En tainnut startata näitä demoneja, joten mitä todennäköisemmin tämän vuoksi ei tullut tuloksia. Testaan uusiksi käynnistämällä nämä, ja tekemällä nmappauksen uudestaan.
+
+$ sudo systemctl start apache2
+
+$ sudo systemctl start ssh
+
+$ nmap -A localhost
+
+![image](https://github.com/user-attachments/assets/5f9c9f0e-f787-43ea-bbb1-1123c9dc2e51)
+
+Noniin, nyt näkyy 2 porttia avoimena kuten olikin tarkoitus. Porttiskannauksella ei siis näe suljettuna olevia servereitä.
+
 
 ### e) Asenna Metasploitable 2 virtuaalikoneeseen
 
@@ -69,9 +83,8 @@ Noudatin Valkamon ohjeita(https://tuomasvalkamo.com/PenTestCourse/week-2/) asenn
     Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa
     Vaihtoehtoisesti voit tehdä molempien koneiden asennuksen ja virtuaaliverkon vagrantilla. Silloin molemmat koneet samaan Vagrantfile:n.
 
-Lisään 
 
-Muokkasin verkkoasetuksia ohjeistuksen mukaan niin, että sallin DHCP serverin. 
+Muokkasin verkkoasetuksia ohjeistuksen mukaan niin, että tein HostOnly#2, ja sallin tälle DHCP serverin. 
 
 ![image](https://github.com/user-attachments/assets/1e84b50e-e6e3-4f3e-a952-aa5801b4dd04)
 
@@ -80,7 +93,7 @@ Muokkasin Metasploitablen asetuksia niin, että vaihdoin network adapterin Natis
 
 ![image](https://github.com/user-attachments/assets/029ec522-3557-4288-a8b8-b442b4ca16bf)
 
-Tämän jälkeen muokkasin Kalin verkkoasetuksia niin, että lisäsin kyseisen verkon  adapter 2 kohtaan.
+Tämän jälkeen muokkasin Kalin verkkoasetuksia niin, että lisäsin kyseisen verkon adapter 2 kohtaan.
 
 Testasin Kalin toimintaa tämän jälkeen, mutta jotain oli mennyt rikki, sillä kone ei enää auennutkaan, vaan heittää "aborted"-herjaa.
 
@@ -108,10 +121,10 @@ Tätä täytyy hieman tutkia. Testasin poistaa luomani verkon ja tehdä sen uude
 
 Yrityksenä on nyt siis saada Kalin ja Metasploitablen välille host only verkon, ja Kali saa myös tarvittaesssa yhteyden verkkoon. 
 
-Vaihdan asetuksista tässä valmiina olleen virtualbox host-only ethernet adapterin, ja muokkaan virtuaalikoneiden asetuksia niin, että ne käyttävät tätä.
+Vaihdan asetuksista VirtualBoxissa valmiina olleen virtualbox host-only ethernet adapterin, ja muokkaan virtuaalikoneiden asetuksia niin, että ne käyttävät tätä.
 Tämä näyttää toimivan, molemmat koneet käynnistyvät taas. Testaan näiden välistä verkkoa tarkemmin.
 
-Pingaan 8.8.8.8, ja toimii. Irrotan verkkokaapelin virtualboxin asetuksista, ei toimi enää.
+Pingaan 8.8.8.8, ja toimii. Irrotan verkkokaapelin virtualboxin asetuksista, ei toimi enää. Näin pitääkin olla.
 
 ![image](https://github.com/user-attachments/assets/96c7c96f-8d62-4404-ad0c-9f68294bac0c)
 
@@ -128,10 +141,11 @@ Annan molemille koneille ifconfig-komennot. Tarvisin Metasp:n ip-osoitteen, jott
 ![image](https://github.com/user-attachments/assets/e4f5befd-b3f5-4c6d-ab79-f5fc66eece0b)
 
 Metasp ei ole nähdäkseni ip4v-osoitetta, eli joku verkossani nyt mättää. Tämän ei pitäisi olla kovin vaikea osuus kurssitehtävistä, mutta tähän on mennyt jo hyvä määrä aikaa.
-Sammutan kaikki koneet ja pidän hieman taukoa.
+Sammutan kaikki koneet ja pidän hieman taukoa. Tässä välin pakko kerrata myös hieman ip-osoitteista, sillä tietoverkkojen kurssista on jo aikaa, eikä nämä ole enää parhaiten mielessä.
 
+------
 
-
+Metasploitable 2:n on vain yksi "Host only ethernet" verkkokortti. Kalissa 2; Adapter 1 NAT jossa kaapeli kiinni/irti tarpeen mukaan, ja adapter2 Host only ethernet adapter.
 
 
 
@@ -159,3 +173,5 @@ https://sourceforge.net/projects/metasploitable/files/latest/download Luettu 29.
 Valkamo 2022: Hacking into a Target Using Metasploit. Luettavissa:
 
 https://tuomasvalkamo.com/PenTestCourse/week-2/ Luettu 29.10.2024
+
+https://en.wikipedia.org/wiki/List_of_Unix_daemons Luettu 29.10.2024
