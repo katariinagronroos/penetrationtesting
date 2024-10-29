@@ -63,9 +63,13 @@ Asensin Metasploitable 2 osoitteesta https://sourceforge.net/projects/metasploit
 Noudatin Valkamon ohjeita(https://tuomasvalkamo.com/PenTestCourse/week-2/) asennuksessa, purin tiedoston ja lisäsin tämän Virtualboxiin.
 
 
-### f) Tee koneiden välille virtuaaliverkko.
+### f) Tee koneiden välille virtuaaliverkko. Jos säätelet VirtualBoxista
 
-Tein koneiden välille virtuaaliverkon niin, että 
+    Kali saa yhteyden Internettiin, mutta sen voi laittaa pois päältä
+    Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa
+    Vaihtoehtoisesti voit tehdä molempien koneiden asennuksen ja virtuaaliverkon vagrantilla. Silloin molemmat koneet samaan Vagrantfile:n.
+
+Lisään 
 
 Muokkasin verkkoasetuksia ohjeistuksen mukaan niin, että sallin DHCP serverin. 
 
@@ -77,6 +81,61 @@ Muokkasin Metasploitablen asetuksia niin, että vaihdoin network adapterin Natis
 ![image](https://github.com/user-attachments/assets/029ec522-3557-4288-a8b8-b442b4ca16bf)
 
 Tämän jälkeen muokkasin Kalin verkkoasetuksia niin, että lisäsin kyseisen verkon  adapter 2 kohtaan.
+
+Testasin Kalin toimintaa tämän jälkeen, mutta jotain oli mennyt rikki, sillä kone ei enää auennutkaan, vaan heittää "aborted"-herjaa.
+
+![image](https://github.com/user-attachments/assets/d2f9aa15-2925-4db9-95df-f43dc699ff92)
+
+Muokkailen asetuksia niin, että otan ruksin pois adapter2 kohdasta, niin kone aukeaa taas. Ongelma taisi olla, että tässä mulla oli jäänyt ruksi molempiin kohtiin, joten testaan vaihtaa ruksit toisinpäin.
+Tämäkään ei auttanut, virheviestiä tulee. Ilmeisesti tässä host-only verkossa, jonka tein, on joku bitti vinossa, minkä vuoksi ei nyt toimi.
+
+![image](https://github.com/user-attachments/assets/9ae600a8-2f17-4077-9e29-d44442098966)
+
+Katson verkkoasetuksia ja vaihdan host-only verkkoyhteydeksi 
+
+"VM Name: kali
+
+Failed to open/create the internal network 'HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2' (VERR_INTNET_FLT_IF_NOT_FOUND).
+Failed to attach the network LUN (VERR_INTNET_FLT_IF_NOT_FOUND).
+Result Code:
+E_FAIL (0X80004005)
+Component:
+ConsoleWrap
+Interface:
+IConsole {6ac83d89-6ee7-4e33-8ae6-b257b2e81be8}
+"
+Tätä täytyy hieman tutkia. Testasin poistaa luomani verkon ja tehdä sen uudestaan, ei auta.
+
+Yrityksenä on nyt siis saada Kalin ja Metasploitablen välille host only verkon, ja Kali saa myös tarvittaesssa yhteyden verkkoon. 
+
+Vaihdan asetuksista tässä valmiina olleen virtualbox host-only ethernet adapterin, ja muokkaan virtuaalikoneiden asetuksia niin, että ne käyttävät tätä.
+Tämä näyttää toimivan, molemmat koneet käynnistyvät taas. Testaan näiden välistä verkkoa tarkemmin.
+
+Pingaan 8.8.8.8, ja toimii. Irrotan verkkokaapelin virtualboxin asetuksista, ei toimi enää.
+
+![image](https://github.com/user-attachments/assets/96c7c96f-8d62-4404-ad0c-9f68294bac0c)
+
+Testaan saman metasploitablelle,  ei ole yhteydessä verkkoon.
+
+![image](https://github.com/user-attachments/assets/f778a328-1bb2-4039-a5f9-b3c99ffb0f64)
+
+Testaan koneiden välistä yhteyttä, ja pyydän metasploitilta ifconfig-komennolla tämän ip-osoitetta, mutta koneella ei näyttäisi olevan ipv4-osoitetta.
+Palaan taas tutkimaan VB host only ethernet adapteria ja tämän asetuksia, ja yritän löytää tähän jotain selitystä. 
+Testaan taas vaihtaa yhteyttä adapter#2, no ei toimi. 
+
+Annan molemille koneille ifconfig-komennot. Tarvisin Metasp:n ip-osoitteen, jotta voisin koittaa pingata tätä Kalilla nähdäkseni onko näiden välinen verkko toiminnassa.
+
+![image](https://github.com/user-attachments/assets/e4f5befd-b3f5-4c6d-ab79-f5fc66eece0b)
+
+Metasp ei ole nähdäkseni ip4v-osoitetta, eli joku verkossani nyt mättää. Tämän ei pitäisi olla kovin vaikea osuus kurssitehtävistä, mutta tähän on mennyt jo hyvä määrä aikaa.
+Sammutan kaikki koneet ja pidän hieman taukoa.
+
+
+
+
+
+
+
 ## Lähteet
 
 Karvinen 2024: Tunkeutumistestaus. Luettavissa: 
@@ -93,11 +152,7 @@ Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by An
 
 https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf Luettu 27.10.2024
 
-Kali. Luettavissa:
-
 https://www.kali.org/get-kali/#kali-live Luettu 27.10.2024
-
-Luettavissa: 
 
 https://sourceforge.net/projects/metasploitable/files/latest/download Luettu 29.10.2024
 
