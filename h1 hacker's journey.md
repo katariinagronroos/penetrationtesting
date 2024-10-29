@@ -60,11 +60,9 @@ Tässä ei nyt näytä olevan eroja mitä analysoida, joten jotain on luultavimm
 
 En tainnut startata näitä demoneja, joten mitä todennäköisemmin tämän vuoksi ei tullut tuloksia. Testaan uusiksi käynnistämällä nämä, ja tekemällä nmappauksen uudestaan.
 
-$ sudo systemctl start apache2
-
-$ sudo systemctl start ssh
-
-$ nmap -A localhost
+    $ sudo systemctl start apache2
+    $ sudo systemctl start ssh
+    $ nmap -A localhost
 
 ![image](https://github.com/user-attachments/assets/5f9c9f0e-f787-43ea-bbb1-1123c9dc2e51)
 
@@ -79,9 +77,9 @@ Noudatin Valkamon ohjeita(https://tuomasvalkamo.com/PenTestCourse/week-2/) asenn
 
 ### f) Tee koneiden välille virtuaaliverkko. Jos säätelet VirtualBoxista
 
-    Kali saa yhteyden Internettiin, mutta sen voi laittaa pois päältä
-    Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa
-    Vaihtoehtoisesti voit tehdä molempien koneiden asennuksen ja virtuaaliverkon vagrantilla. Silloin molemmat koneet samaan Vagrantfile:n.
+   -  Kali saa yhteyden Internettiin, mutta sen voi laittaa pois päältä
+   -  Kalin ja Metasploitablen välillä on host-only network, niin että porttiskannatessa ym. koneet on eristetty intenetistä, mutta ne saavat yhteyden toisiinsa
+   -  Vaihtoehtoisesti voit tehdä molempien koneiden asennuksen ja virtuaaliverkon vagrantilla. Silloin molemmat koneet samaan Vagrantfile:n.
 
 
 Muokkasin verkkoasetuksia ohjeistuksen mukaan niin, että tein HostOnly#2, ja sallin tälle DHCP serverin. 
