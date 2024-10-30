@@ -158,6 +158,8 @@ Ei auta.
 Asennan Metasploitablen uusiksi, jos auttaisi.
 ![image](https://github.com/user-attachments/assets/2fee5f51-d4dd-4f42-8827-4c6fcacb5114)
 
+No ei näemmä. Tässä välissä kaivoin toisen koneen kaapista ja ajattelin että testaan Linuxilla, mutta enpä muista sen salasanaa, joten kirjautuminen jäi nyt siihen.
+
 
 ## Lähteet
 
