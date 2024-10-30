@@ -152,6 +152,7 @@ Yritän luoda virtualisointiympäristöä Vagrantilla, mutta tämäkään ei nyt
 ![image](https://github.com/user-attachments/assets/da8eb9f4-d4f0-4f93-b393-8be1bc98542c)
 
 Tsekkasin BIOSin asetuksista että virtualisointi on päällä, poistin ja asensin Vagrantin uudestaan.
+Muokkaan virtualboxista host only-verkkoa, poistan tämän ja luon uusiksi, vaihdan host onlyn Kalini adapter1 jos tällä olisi vaikutusta.
 
 
 ## Lähteet
