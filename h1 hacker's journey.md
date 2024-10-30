@@ -1,4 +1,4 @@
-Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10, 29.10 ja 30.10. VirtualBox VM, jossa asennettuna Kali Linux. Kalissa 6 GB muistia ja 20GB tilaa.
+Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10, 29.10 ja 30.10. VirtualBox VM-alustalla, jossa asennettuna Kali Linux ja Metasploit 2. Kalissa 6 GB muistia ja 20GB tilaa.
 
 Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tunkeutumistestaus/.
 
@@ -6,7 +6,10 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 
 ### Herrasmieshakkerit (RSS) tai Darknet Diaries (RSS) , yksi vapaavalintainen jakso jommasta kummasta.
 
-Jes yksi suosikkipodeistani, herrasmieshakkerit. Kuuntelen uusimman jakson, "Tietoturvan Niksipirkka, vieraana Juho Rikala 0x34).
+Kuuntelin Herrasmieshakkereiden toiseksi uusimman jakson Case Vastaamo, vieraana Marko Leponiemi 0x33. Tässä rikosylikomisaario Marko Leponen oli kertomassa Vastaamon tietomurtotapauksen tutkinnasta poliisin näkökulmasta. Tästä mieleen jäivät seuraavat asiat; 
+- todistusaineiston(palvelimia, palvelinkuvia) valtava määrä; 1 betatavu, eli tuhat teratavua. KRPn tutkintamateriaaleja ei saa säilöä pilvessä, joten ollut oma hommansa keksiä mihin tuollaisen määrän dataa saa ylipäätään talletettua, saati läpikäytyä.
+- tutkinnassa auttanut vahingossa vuodettu tar(tape archive)-tiedosto, joka oli yksi keskeinen asia. Tar tiedostoformaattina sellainen, että vain palasesta saa selville tiedoston ensimmäisiä rivejä. Eli jos 11 GB tiedostosta saadaan vain megatavu, pystyy näkemään mitkä tiedoston ensimmäiset rivit ovat. Tässä oli linkkejä eteenpäin, ip-osoitteita jota pystyttiin seuraamaan yms.
+- virtualivaluutta Moneron lohkoketjun selvitys, joka oli ollut poikkeuksellinen prosessi ihan maailmanlaajuisesti. 
 
 ### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain.
 
@@ -82,7 +85,10 @@ En tainnut startata näitä demoneja, joten mitä todennäköisemmin tämän vuo
 
 ![image](https://github.com/user-attachments/assets/5f9c9f0e-f787-43ea-bbb1-1123c9dc2e51)
 
-Noniin, nyt näkyy 2 porttia avoimena kuten olikin tarkoitus. Porttiskannauksella ei siis näe suljettuna olevia servereitä.
+Noniin, nyt näkyy 2 porttia avoimena kuten olikin tarkoitus, ja 998 suljettua porttia. Porttiskannauksella ei siis näe suljettuna olevia servereitä.
+
+Tässä avoimina näkyvät portit 80 ja 22. Tästä näkee, että portti 22 on SSH, ja tämän tarkempi versiokin(OpenSSH 9.9p1 Debian).
+Portti 80 taas HTTP, ja apache
 
 
 ### e) Asenna Metasploitable 2 virtuaalikoneeseen
@@ -155,7 +161,7 @@ Annan molemille koneille ifconfig-komennot. Tarvisin Metasp:n ip-osoitteen, jott
 ![image](https://github.com/user-attachments/assets/e4f5befd-b3f5-4c6d-ab79-f5fc66eece0b)
 
 Metasp ei ole nähdäkseni ip4v-osoitetta, eli joku verkossani nyt mättää. Tämän ei pitäisi olla kovin vaikea osuus kurssitehtävistä, mutta tähän on mennyt jo hyvä määrä aikaa.
-Sammutan kaikki koneet ja pidän hieman taukoa. Tässä välin pakko kerrata myös hieman ip-osoitteista, sillä tietoverkkojen kurssista on jo aikaa, eikä nämä ole enää parhaiten mielessä.
+Sammutan kaikki koneet ja jatkan myöhemmin uudestaan. Tässä välin pakko kerrata myös hieman ip-osoitteista, sillä tietoverkkojen kurssista on jo aikaa, eikä nämä ole enää parhaiten mielessä.
 
 ------
 
@@ -178,7 +184,9 @@ No ei näemmä. Tässä välissä kaivoin toisen koneen kaapista ja ajattelin et
 
 Testaan yhdistää Metasploitablen nyt hetkeksi NAT-verkkoon, josko tämä olisikin pitänyt tehdä ihan alussa. Konfiguroin asetukset tämän jälkeen uudestaan niinkuin näiden pitäisi olla, ja annan ifconfig-komennon.
 ![image](https://github.com/user-attachments/assets/9a39185b-41a4-451d-b798-1bf116219491)
+
 En vieläkään saa ipv4-osoitetta, jonka tarvitsisin muodossa 192.jotain, jotta verkkoni osoittautuisi toimivaksi. Ei nyt vaan onnistu, joten loput tehtävistä jää jollekkin toiselle kertaa.
+
 
 
 ## Lähteet
@@ -212,3 +220,8 @@ https://en.wikipedia.org/wiki/List_of_Unix_daemons Luettu 29.10.2024
 https://www.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/ Luettu 30.10.2024
 
 https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide Luettu 30.10.2024
+
+Tapaus Vastaamo, vieraana Marko Leponen | 0x33. [podcast].
+
+https://hakkerit.libsyn.com/tapaus-vastaamo-vieraana-marko-leponen-0x33 Kuunneltu 30.10.2024
+
