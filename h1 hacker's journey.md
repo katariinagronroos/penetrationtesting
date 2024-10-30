@@ -166,6 +166,10 @@ Asennan Metasploitablen uusiksi, jos auttaisi.
 
 No ei näemmä. Tässä välissä kaivoin toisen koneen kaapista ja ajattelin että testaan Linuxilla, mutta enpä muista sen salasanaa, joten kirjautuminen jäi nyt siihen.
 
+Testaan yhdistää Metasploitablen nyt hetkeksi NAT-verkkoon, josko tämä olisikin pitänyt tehdä ihan alussa. Konfiguroin asetukset tämän jälkeen uudestaan niinkuin näiden pitäisi olla, ja annan ifconfig-komennon.
+![image](https://github.com/user-attachments/assets/9a39185b-41a4-451d-b798-1bf116219491)
+En vieläkään saa ipv4-osoitetta, jonka tarvitsisin muodossa 192.jotain, jotta verkkoni osoittautuisi toimivaksi. 
+
 
 ## Lähteet
 
