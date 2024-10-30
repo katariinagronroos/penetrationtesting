@@ -8,13 +8,14 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 
 - Intrusion Kill Chain tai Cyber Kill Chain on Lockheed Martinin kehittämä 7-osainen prosessi, jossa kuvataan tietojärjestelmiin tunkeutumista vaihe vaiheelta. Mikäli jokin vaihe epäonnistuu, koko yritys epäonnistuu.
 - Tausta USAn armeijan toiminnassa, muokattu tietojärjestelmille sopivaksi
-- Reconnaissance, weaponization, delivery, Exploitation, Installation, Command and Control (C2), Actions on Objectives
+- Kill Chainin osa-alueet ovat: Reconnaissance, weaponization, delivery, Exploitation, Installation, Command and Control (C2), Actions on Objectives
 
 ###  KKO:2003:36
 
--KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä.
--
--
+-KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä pankin tietojärjestelmään.
+- Rikos oli tapahtunut vuonna 1998, kun tuolloin 17-vuotias syytetty oli porttiskannannut osuuskunnan nettiin yhteydessä olevat verkon osoitteet tarkoituksena löytää avoimia portteja joiden kautta murtautua tietojärjestelmään.
+- Avoimia portteja ei ollut ollut, eikä täten murtautumista ollut tapahtunut, mutta syyte perustui siihen, että mikäli näitä olisi ollut, olisi myös tietomurto toteutettu.
+- Tekijä tuomittu kymmenien tuhansien markkojen sakkoihin ja vahingonkorvauksiin.
 
 ### a) Asenna Kali virtuaalikoneeseen. (Jos asennuksessa ei ole mitään ongelmia tai olet asentanut jo aiemmin, tarkkaa raporttia tästä alakohdasta ei tarvita. Kerro silloin kuitenkin, mikä versio ja millä asennustavalla. Jos on ongelmia, niin tarkka ja toistettava raportti).
 
