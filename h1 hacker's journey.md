@@ -4,6 +4,10 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 
 ### x) Lue/katso/kuuntele ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.)
 
+### Herrasmieshakkerit (RSS) tai Darknet Diaries (RSS) , yksi vapaavalintainen jakso jommasta kummasta.
+
+Jes yksi suosikkipodeistani, herrasmieshakkerit. Kuuntelen uusimman jakson, "Tietoturvan Niksipirkka, vieraana Juho Rikala 0x34).
+
 ### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain.
 
 - Intrusion Kill Chain tai Cyber Kill Chain on Lockheed Martinin kehittämä 7-osainen prosessi, jossa kuvataan tietojärjestelmiin tunkeutumista vaihe vaiheelta. Mikäli jokin vaihe epäonnistuu, koko yritys epäonnistuu.
@@ -19,9 +23,6 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 o	-p <port ranges>, voi skannata vain tietyn portin
 - Videossa hyödynnetään web service reviewihin Eyewitness-ohjelmaa, jonka avulla saa avoimista porteista ja näihin liittyvistä verkkosivuista lisätietoa, jolloin voi päätellä mihin tulisi hyökätä (ohjelma ottaa snapshotteja, joiden avulla näkyy tarkemmin millainen sivu on käytännössä).
 - Toisessa videossa käydään läpi network vulnerability skannereita(esim OpenVAS, Nessus) ja web vulnerability skannereita(esim Nikto,  WPScan). Nmapilla voi myös vulnerability skannata rajoitetusti. Videolla demotaan yhden haavoittuvuuden skannausta nmapilla.
-
-
-
 
 
 ###  KKO:2003:36
