@@ -11,9 +11,18 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 - Kill Chainin osa-alueet ovat: Reconnaissance, weaponization, delivery, Exploitation, Installation, Command and Control (C2), Actions on Objectives
 
 ### € Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance.
+- Videoilla esitellään active reconnaissancea(aktiivista tiedustelua), ja tämän työkaluja. 
+- Alussa kerrotaan aktiivisen ja passiivisen tiedustelun eroja; siinä missä passiivinen tiedustelu ei jätä jälkiä, aktiivisessa lähetään dataa vastaanottajan verkkoon, jolloin tästä jää jälki lokeihin, jonka voi nähdä näistä lokeista.
+- Aktiiviseen tiedustelun metodeja ovat porttiskannaus (port scanning), web service review ja vulnerability scanning (haavoittuvuusskannaus?)
+- Videolla esitellään kahta TCP-skanneria(Nmap, MAssScan), ja tämän lisäksi UDP-protokrollaskanneria. Näistä Nmap suosituin ja monipuolisin porttiskanneri, kun taas MassScan on nopein skanneri, jolla voi skannata esim koko internetin laajuisesti ihan hetkessä.
+- Videolla suositellaan seuraavia nmapin parametreja;
+o	-p <port ranges>, voi skannata vain tietyn portin
+- Videossa hyödynnetään web service reviewihin Eyewitness-ohjelmaa, jonka avulla saa avoimista porteista ja näihin liittyvistä verkkosivuista lisätietoa, jolloin voi päätellä mihin tulisi hyökätä (ohjelma ottaa snapshotteja, joiden avulla näkyy tarkemmin millainen sivu on käytännössä).
+- Toisessa videossa käydään läpi network vulnerability skannereita(esim OpenVAS, Nessus) ja web vulnerability skannereita(esim Nikto,  WPScan). Nmapilla voi myös vulnerability skannata rajoitetusti. Videolla demotaan yhden haavoittuvuuden skannausta nmapilla.
 
--
--
+
+
+
 
 ###  KKO:2003:36
 
