@@ -10,6 +10,11 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 - Tausta USAn armeijan toiminnassa, muokattu tietojärjestelmille sopivaksi
 - Kill Chainin osa-alueet ovat: Reconnaissance, weaponization, delivery, Exploitation, Installation, Command and Control (C2), Actions on Objectives
 
+### € Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance.
+
+-
+-
+
 ###  KKO:2003:36
 
 -KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä pankin tietojärjestelmään.
@@ -187,3 +192,7 @@ Valkamo 2022: Hacking into a Target Using Metasploit. Luettavissa:
 https://tuomasvalkamo.com/PenTestCourse/week-2/ Luettu 29.10.2024
 
 https://en.wikipedia.org/wiki/List_of_Unix_daemons Luettu 29.10.2024
+
+€ Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. Luettavissa:
+
+https://www.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/ Luettu 30.10.2024
