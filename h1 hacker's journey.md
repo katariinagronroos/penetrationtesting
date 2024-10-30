@@ -1,4 +1,4 @@
-Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10 ja 29.10 VirtualBox VM, jossa asennettuna Kali Linux. Kalissa 6 GB muistia ja 20GB tilaa.
+Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10, 29.10 ja 30.10. VirtualBox VM, jossa asennettuna Kali Linux. Kalissa 6 GB muistia ja 20GB tilaa.
 
 Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tunkeutumistestaus/.
 
@@ -151,8 +151,12 @@ Yritän luoda virtualisointiympäristöä Vagrantilla, mutta tämäkään ei nyt
 
 ![image](https://github.com/user-attachments/assets/da8eb9f4-d4f0-4f93-b393-8be1bc98542c)
 
-Tsekkasin BIOSin asetuksista että virtualisointi on päällä, poistin ja asensin Vagrantin uudestaan.
-Muokkaan virtualboxista host only-verkkoa, poistan tämän ja luon uusiksi, vaihdan host onlyn Kalini adapter1 jos tällä olisi vaikutusta.
+Tsekkasin BIOSin asetuksista että virtualisointi on päällä, poistin ja asensin Vagrantin uudestaan. Muokkasin Vagrantfilen sisältöä niin, että se vastasi edellisellä palvelinten hallinta-kurssilta tuttua kaavaa, jolloin tämä oli toiminut ihan hyvin, mutta nyt ei jostain syystä mikään Virtualboxiin liittyvä tunnu toimivan koneellani oikein-
+
+Muokkaan virtualboxista host only-verkkoa, poistan tämän ja luon uusiksi, vaihdan host onlyn Kalini adapter1 jos tällä olisi vaikutusta. 
+Ei auta.
+Asennan Metasploitablen uusiksi, jos auttaisi.
+![image](https://github.com/user-attachments/assets/2fee5f51-d4dd-4f42-8827-4c6fcacb5114)
 
 
 ## Lähteet
