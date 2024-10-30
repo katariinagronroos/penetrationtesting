@@ -145,7 +145,13 @@ Sammutan kaikki koneet ja pidän hieman taukoa. Tässä välin pakko kerrata my�
 
 Metasploitable 2:n on vain yksi "Host only ethernet" verkkokortti. Kalissa 2; Adapter 1 NAT jossa kaapeli kiinni/irti tarpeen mukaan, ja adapter2 Host only ethernet adapter.
 
+// Jatkuu seuraavana päivänä.
 
+Yritän luoda virtualisointiympäristöä Vagrantilla, mutta tämäkään ei nyt näytä toimivan enää. 
+
+![image](https://github.com/user-attachments/assets/da8eb9f4-d4f0-4f93-b393-8be1bc98542c)
+
+Tsekkasin BIOSin asetuksista että virtualisointi on päällä, poistin ja asensin Vagrantin uudestaan.
 
 
 ## Lähteet
