@@ -17,7 +17,7 @@ Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tun
 
 ###  KKO:2003:36
 
--KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä pankin tietojärjestelmään.
+- KKO:2003:36 on Korkeimman Oikeuden ennakkopäätös vuodelta 2003, jossa käsiteltiin tekijän A syytettä tietomurron yrityksestä pankin tietojärjestelmään.
 - Rikos oli tapahtunut vuonna 1998, kun tuolloin 17-vuotias syytetty oli porttiskannannut osuuskunnan nettiin yhteydessä olevat verkon osoitteet tarkoituksena löytää avoimia portteja joiden kautta murtautua tietojärjestelmään.
 - Avoimia portteja ei ollut ollut, eikä täten murtautumista ollut tapahtunut, mutta syyte perustui siihen, että mikäli näitä olisi ollut, olisi myös tietomurto toteutettu.
 - Tekijä tuomittu kymmenien tuhansien markkojen sakkoihin ja vahingonkorvauksiin.
@@ -168,7 +168,7 @@ No ei näemmä. Tässä välissä kaivoin toisen koneen kaapista ja ajattelin et
 
 Testaan yhdistää Metasploitablen nyt hetkeksi NAT-verkkoon, josko tämä olisikin pitänyt tehdä ihan alussa. Konfiguroin asetukset tämän jälkeen uudestaan niinkuin näiden pitäisi olla, ja annan ifconfig-komennon.
 ![image](https://github.com/user-attachments/assets/9a39185b-41a4-451d-b798-1bf116219491)
-En vieläkään saa ipv4-osoitetta, jonka tarvitsisin muodossa 192.jotain, jotta verkkoni osoittautuisi toimivaksi. 
+En vieläkään saa ipv4-osoitetta, jonka tarvitsisin muodossa 192.jotain, jotta verkkoni osoittautuisi toimivaksi. Ei nyt vaan onnistu, joten loput tehtävistä jää jollekkin toiselle kertaa.
 
 
 ## Lähteet
@@ -200,3 +200,5 @@ https://en.wikipedia.org/wiki/List_of_Unix_daemons Luettu 29.10.2024
 € Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. Luettavissa:
 
 https://www.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/ Luettu 30.10.2024
+
+https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide Luettu 30.10.2024
