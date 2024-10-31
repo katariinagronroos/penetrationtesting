@@ -199,6 +199,17 @@ Ensiksi ei toimi, mutta käynnistän koneet uudestaan ja viimein toimii täysill
 
 ### g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
 
+Skannaan Kalilla komennolla nmap -sn, ja tarkistan selaimella että löysin oikean IP:n.
+
+![image](https://github.com/user-attachments/assets/25e45871-e0c4-41e9-9eca-9b8a4e52a216)
+
+![image](https://github.com/user-attachments/assets/56a4f1e8-0175-4ed8-9311-3a20fec1c6bb)
+
+Joo, oikealta näyttää.
+
+### 
+
+
 ## Lähteet
 
 Karvinen 2024: Tunkeutumistestaus. Luettavissa: 
