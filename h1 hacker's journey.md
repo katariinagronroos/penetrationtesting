@@ -1,4 +1,4 @@
-Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10, 29.10 ja 30.10. VirtualBox VM-alustalla, jossa asennettuna Kali Linux ja Metasploit 2. Kalissa 6 GB muistia ja 20GB tilaa.
+Ao. vastaukset ovat osa kotitehtävää h1 hacker's journey Haaga-Helian tunkeutumistestaus-kurssilla, jota opettaa Tero Karvinen. Harjoituksia tehtiin 27.10, 29.10, 30.10 ja 31.10. VirtualBox VM-alustalla, jossa asennettuna Kali Linux ja Metasploit 2. Kalissa 6 GB muistia ja 20GB tilaa.
 
 Harjoituksen tehtävänannot löytyvät osoitteesta https://terokarvinen.com/tunkeutumistestaus/.
 
@@ -207,7 +207,27 @@ Skannaan Kalilla komennolla nmap -sn, ja tarkistan selaimella että löysin oike
 
 Joo, oikealta näyttää.
 
-### 
+### h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Poimi 2-3 hyökkääjälle kiinnostavinta porttia. Analysoi ja selitä tulokset näiden porttien osalta.
+
+Porttiskannaan Metaspn kokonaan ao. kommennolla;
+
+    $ nmap -A -p- 192.168.168.3
+    
+![image](https://github.com/user-attachments/assets/9b93c2ae-9e85-4092-9110-aed49740eed2)
+
+![image](https://github.com/user-attachments/assets/9ad36080-0a7f-411a-ac67-410a1add17c0)
+
+Tästä saadaankin valtavasti tietoa.
+
+Metasploitablessa 65505 suljettua porttia ja paljon myös aukinaisia.
+
+Esim Portti 21, ftp-palvelimen portti on auki, ja tästä näyttäisi myös näkyvän mihin IP-osoitteeseen tämä on vuorostaan yhteydessä?
+"Control connection is plain text, data connection will be plain text" vaikuttaa olevan myös aika suojaton sisällöltään.
+
+Portti 3306 MySQL avonaisena.
+
+Lopussa näkee myös kohdekoneen tietoja aika tarkalla tasolla, kuten tietokoneen nimen.
+
 
 
 ## Lähteet
@@ -242,7 +262,7 @@ https://www.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00
 
 https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide Luettu 30.10.2024
 
-Tapaus Vastaamo, vieraana Marko Leponen | 0x33. [podcast].
+Herrasmieshakkerit: Tapaus Vastaamo, vieraana Marko Leponen 0x33. [podcast].
 
 https://hakkerit.libsyn.com/tapaus-vastaamo-vieraana-marko-leponen-0x33 Kuunneltu 30.10.2024
 
