@@ -187,7 +187,17 @@ Testaan yhdistää Metasploitablen nyt hetkeksi NAT-verkkoon, josko tämä olisi
 
 En vieläkään saa ipv4-osoitetta, jonka tarvitsisin muodossa 192.jotain, jotta verkkoni osoittautuisi toimivaksi. Ei nyt vaan onnistu, ehkä tunnilla tajuan mikä tässä nyt menee pieleen. Loput tehtävistä jää jollekkin toiselle kertaa, koska en voi suorittaa niitä ilman toimivaa verkkoa laitteideni välillä.
 
+// Update 31.10.2024
+Päätin nyt vielä kokeilla, kun huomasin että virtualboxissani oli päivitys tekemättä. Päivitin Virtualboxin ja nyt verkko toimiikin kuin ihmeen kaupalla?? 
 
+![image](https://github.com/user-attachments/assets/28488485-1d76-4826-b547-025626938b3c)
+
+Jeee. Testaan vielä koneiden välisen yhteyden, pingaamalla Kalilla tuota Metasploitin ip-osoitetta 192.168.168.3.
+Ensiksi ei toimi, mutta käynnistän koneet uudestaan ja viimein toimii täysillä! Note to self, jatkossa tarkista että kaikki softa on ajantasalla ja päivitettynä.
+
+![image](https://github.com/user-attachments/assets/082ca998-c531-4c87-94ab-259ff88e510c)
+
+### g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
 
 ## Lähteet
 
